@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-size: 14.6667px;
+  font-style: normal;
+  line-height: 24.2px;  
+  color: #a0a0a1;
+}
+
+h1 {
+  font-size: 14.6667px;
+  line-height: 14.6667px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 11.7333px;
+  line-height: 17.6px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+}
+
+main #imagesGallery {
+  margin-bottom: 59px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  position: relative;
+}
+
+main > #imagesGallery figure {
+  width: 100%;
+  height: 332px;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-end;
+}
+
+main > #imagesGallery > figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+main > #imagesGallery > figure figcaption {
+  padding: 25px;
+  position: absolute;
+  text-transform: uppercase;
+}
+
+main #imageDetailsModal {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(5px);
+  display: none;
+  color: #fff;
+}
+
+main > #imageDetailsModal > figure,
+main > #imageDetailsModal > div {
+  position: absolute;
+  width: 64.25%;
+  height: 75%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+main > #imageDetailsModal > figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+main > #imageDetailsModal > figure figcaption {
+  width: 90%;
+  padding: 36px 32px;
+  position: absolute;
+  bottom: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: "ellipsis";
+}
+
+main > #imageDetailsModal > div {
+  display: flex;
+  flex-direction: column;
+}
+
+main > #imageDetailsModal > div > figure {
+  display: flex;
+  justify-content: flex-end;
+}
+
+main > #imageDetailsModal > div > figure > #closeImageDetailsModal,
+main > #imageDetailsModal > div > div #previousImage,
+main > #imageDetailsModal > div > div #nextImage {
+  width: 3rem;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+main > #imageDetailsModal > div > div {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main > #imageDetailsModal > div > figure > #closeImageDetailsModal:hover,
+main > #imageDetailsModal > div > div #previousImage:hover,
+main > #imageDetailsModal > div > div #nextImage:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+footer {
+  width: 100%;
+  height: 59px;
+  padding: 0 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  background: #1f2224;
+}
+
+footer > div span:nth-child(1) {
+  color: #fff;
+}
+
+footer > #aboutWrapper {
+  display: flex;
+  gap: 10px;
+}
+
+footer > #aboutWrapper figure {
+  width: 20px;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  main #imagesGallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  main > #imageDetailsModal > figure,
+  main > #imageDetailsModal > div {
+    width: 80%;
+    height: 45%;
+  }
+
+  main > #imageDetailsModal > figure figcaption {
+    padding: 16px 32px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  main #imagesGallery {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  main > #imageDetailsModal > figure,
+  main > #imageDetailsModal > div {
+    width: 100%;
+    height: 40%;
+  }
+}

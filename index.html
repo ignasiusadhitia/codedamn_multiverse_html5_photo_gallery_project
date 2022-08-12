@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multiverse HTML5 Photo Gallery</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <section id="imagesGallery"></section>
+      <section id="imageDetailsModal">
+        <figure>
+          <img
+            id="modalImage"
+            src="/assets/images/01.jpg"
+            alt="image title 1"
+          />
+          <figcaption>
+            <h1 id="modalTitle"></h1>
+            <p id="modalDescription"></p>
+          </figcaption>
+        </figure>
+        <div>
+          <figure>
+            <img
+              id="closeImageDetailsModal"
+              src="/assets/images/close.svg"
+              alt="close"
+            />
+          </figure>
+
+          <div>
+            <figure id="previousImageWrapper">
+              <img
+                id="previousImage"
+                src="/assets/images/left-svgrepo-com.svg"
+                alt="previous"
+              />
+            </figure>
+
+            <figure id="nextImageWrapper">
+              <img
+                id="nextImage"
+                src="/assets/images/right-svgrepo-com.svg"
+                alt="previous"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div><span>MULTIVERSE </span><span>BY HTML5 UP</span></div>
+      <div id="aboutWrapper">
+        <span>ABOUT</span>
+        <figure>
+          <img src="/assets/images/info-svgrepo-com.svg" alt="info" />
+        </figure>
+      </div>
+    </footer>
+    <script src="/script.js"></script>
+  </body>
+</html>
